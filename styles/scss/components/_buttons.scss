@@ -1,0 +1,46 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.burger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  &__line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+    @media (max-width: $laptop) {
+      width: 22px;
+    }
+  }
+
+  // Active state (crossed)
+  &.active {
+    .burger__line {
+      &:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+  }
+}
