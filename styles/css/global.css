@@ -379,9 +379,6 @@ footer .container {
     max-width: 100%;
   }
 }
-footer .container {
-  border: 3px dotted hotpink;
-}
 footer .container .top-line {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -415,7 +412,6 @@ footer .container .top-line {
   }
 }
 footer .container .top-line .footer-logos {
-  border: 2px dotted red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,6 +432,25 @@ footer .container .top-line .footer-logos {
 @media (max-width: 1400px) {
   footer .container .top-line .footer-logos {
     gap: 30px;
+  }
+}
+@media (max-width: 640px) {
+  footer .container .top-line .footer-logos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 footer .container .top-line nav ul {
@@ -461,6 +476,11 @@ footer .container .top-line nav ul {
     gap: 20px;
   }
 }
+@media (max-width: 640px) {
+  footer .container .top-line nav ul {
+    gap: 12px;
+  }
+}
 footer .container .top-line nav ul a {
   color: #ffffff;
   font-family: "Montserrat";
@@ -472,6 +492,11 @@ footer .container .top-line nav ul a {
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
+@media (max-width: 640px) {
+  footer .container .top-line nav ul a {
+    font-size: 14px;
+  }
+}
 footer .container .top-line nav ul a:hover {
   color: #00a092;
 }
@@ -479,7 +504,8 @@ footer .container .top-line .donate-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 359px;
+  max-width: 359px;
+  width: 100%;
   height: 74px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -499,6 +525,11 @@ footer .container .top-line .donate-btn {
   text-transform: uppercase;
   cursor: pointer;
 }
+@media (max-width: 640px) {
+  footer .container .top-line .donate-btn {
+    font-size: 14px;
+  }
+}
 footer .container .top-line .donate-btn:hover {
   background-color: #05786e;
 }
@@ -508,10 +539,86 @@ footer .container .mid-line {
   width: 100%;
 }
 footer .container .bottom-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   padding: 40px 0;
+}
+@media (max-width: 730px) {
+  footer .container .bottom-line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 30px;
+  }
 }
 @media (max-width: 640px) {
   footer .container .bottom-line {
     padding: 50px 0;
   }
+}
+footer .container .bottom-line .copyrights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 30px 50px;
+}
+@media (max-width: 730px) {
+  footer .container .bottom-line .copyrights {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+footer .container .bottom-line .copyrights p {
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+footer .container .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 40px;
 }/*# sourceMappingURL=global.css.map */

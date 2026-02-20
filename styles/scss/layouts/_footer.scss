@@ -9,7 +9,6 @@ footer {
   background-color: $zoo-blue;
   .container {
     @include zoo-container;
-    border: 3px dotted hotpink;
     .top-line {
       @include goflex(row, space-between, center);
       padding: 70px 0;
@@ -21,11 +20,13 @@ footer {
         padding: 50px 0;
       }
       .footer-logos {
-        border: 2px dotted red;
         @include goflex(row, center, center);
         gap: 65px;
         @media (max-width: 1400px) {
           gap: 30px;
+        }
+        @media (max-width: $tablet) {
+          @include goflex(column, center, center);
         }
       }
       nav {
@@ -34,6 +35,9 @@ footer {
           gap: 46px;
           @media (max-width: 1400px) {
             gap: 20px;
+          }
+          @media (max-width: $tablet) {
+            gap: 12px;
           }
           a {
             color: $zoo-white;
@@ -44,6 +48,9 @@ footer {
             line-height: normal;
             text-transform: uppercase;
             transition: all 0.1s ease;
+            @media (max-width: $tablet) {
+              font-size: 14px;
+            }
             &:hover {
               color: $zoo-green;
             }
@@ -60,10 +67,34 @@ footer {
       width: 100%;
     }
     .bottom-line {
+      @include goflex(row, space-between, center);
       padding: 40px 0;
+      @media (max-width: 730px) {
+        flex-direction: column-reverse;
+        gap: 30px;
+      }
       @media (max-width: $tablet) {
         padding: 50px 0;
       }
+      .copyrights {
+        @include goflex(row, center, center);
+        gap: 30px 50px;
+        @media (max-width: 730px) {
+          flex-direction: column;
+        }
+        p {
+          color: $zoo-white;
+          font-family: $zoo-font;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+      }
+    }
+    .social-icons {
+      @include goflex(row, center, center);
+      gap: 40px;
     }
   }
 }
