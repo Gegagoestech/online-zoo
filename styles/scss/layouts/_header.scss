@@ -11,28 +11,32 @@ header {
   .container {
     @include zoo-container;
     @include goflex(row, space-between, center);
+    gap: 30px;
     height: 100%;
     nav {
       @include goflex(row, center, center);
       gap: 68px;
       @media (max-width: 950px) {
+        gap: 30px;
+      }
+      @media (max-width: 850px) {
         display: none;
       }
       ul {
         @include goflex();
         gap: 48px;
-        @media (max-width: $desktop) {
-          gap: 30px;
+        @media (max-width: 1000px) {
+          gap: 20px;
         }
         a {
           color: #000;
-          font-family: Montserrat;
+          font-family: $zoo-font;
           font-size: 18px;
           font-style: normal;
           font-weight: 600;
           line-height: 150%; /* 27px */
           text-transform: uppercase;
-          transition: all 0.15s ease;
+          transition: all 0.1s ease;
           &:hover {
             color: #ffffff;
           }
@@ -47,11 +51,14 @@ header {
       .social-icons {
         @include goflex(row, center, center);
         gap: 30px;
+        @media (max-width: 950px) {
+          gap: 20px;
+        }
       }
     }
     .burger {
       display: none;
-      @media (max-width: 950px) {
+      @media (max-width: 850px) {
         display: flex;
       }
     }

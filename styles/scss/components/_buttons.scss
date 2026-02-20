@@ -44,3 +44,25 @@
     }
   }
 }
+
+@mixin donate-btn {
+  display: flex;
+  width: 359px;
+  height: 74px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid $zoo-white;
+  color: $zoo-white;
+  font-family: $zoo-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    background-color: $zoo-green-hover;
+  }
+}

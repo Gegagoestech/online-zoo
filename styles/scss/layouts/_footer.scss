@@ -1,2 +1,69 @@
 @use "../components/variables" as *;
 @use "../components/mixins" as *;
+@use "../components/buttons" as *;
+@use "../components/fonts" as *;
+@use "../components/reset" as *;
+
+footer {
+  width: 100%;
+  background-color: $zoo-blue;
+  .container {
+    @include zoo-container;
+    border: 3px dotted hotpink;
+    .top-line {
+      @include goflex(row, space-between, center);
+      padding: 70px 0;
+      @media (max-width: $laptop) {
+        flex-direction: column;
+        gap: 50px;
+      }
+      @media (max-width: $tablet) {
+        padding: 50px 0;
+      }
+      .footer-logos {
+        border: 2px dotted red;
+        @include goflex(row, center, center);
+        gap: 65px;
+        @media (max-width: 1400px) {
+          gap: 30px;
+        }
+      }
+      nav {
+        ul {
+          @include goflex(row, center, center);
+          gap: 46px;
+          @media (max-width: 1400px) {
+            gap: 20px;
+          }
+          a {
+            color: $zoo-white;
+            font-family: $zoo-font;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+            transition: all 0.1s ease;
+            &:hover {
+              color: $zoo-green;
+            }
+          }
+        }
+      }
+      .donate-btn {
+        @include donate-btn;
+      }
+    }
+    .mid-line {
+      background-color: #fff;
+      height: 1px;
+      width: 100%;
+    }
+    .bottom-line {
+      padding: 40px 0;
+      @media (max-width: $tablet) {
+        padding: 50px 0;
+      }
+    }
+  }
+}
